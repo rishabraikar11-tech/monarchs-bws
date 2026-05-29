@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anteiku BWS Community Applications</title>
+    <style>
+        /* Base Styles */
+        body {
+            background-color: #030303;
+            color: #ffffff;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px 10px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            max-width: 500px;
+            width: 100%;
+        }
+
+        /* Typography & Headers */
+        h1 {
+            text-align: center;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            letter-spacing: 0.5px;
+            line-height: 1.4;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 12px;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-decoration: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            box-sizing: border-box;
+            gap: 10px;
+        }
+        .btn-discord { background-color: #5865F2; }
+        .btn-telegram { background-color: #0088cc; }
+        .btn-curator { background-color: #363636; color: #ffffff; }
+        .btn-red { background-color: #e60000; }
+        .btn-submit { background-color: #e60000; margin-top: 15px; }
+        .btn-submit-dark { background-color: #800000; margin-top: 15px; } /* For blacklist button */
+
+        /* Separator */
+        hr {
+            border: 0;
+            height: 2px;
+            background-color: #e60000;
+            margin: 25px 0;
+        }
+
+        /* Form Cards */
+        .form-card {
+            background-color: #121212;
+            border-top: 2px solid #e60000;
+            border-radius: 8px;
+            padding: 25px 20px;
+            margin-bottom: 25px;
+            position: relative;
+            overflow: hidden;
+        }
+        .form-card h2 {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-top: 0;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #222;
+            padding-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        /* Form Inputs */
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #dddddd;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 12px;
+            background-color: #050505;
+            border: 1px solid #1a1a1a;
+            border-radius: 5px;
+            color: white;
+            box-sizing: border-box;
+            font-family: inherit;
+            font-size: 0.9rem;
+            resize: vertical;
+        }
+        input[type="text"]:focus, textarea:focus {
+            outline: 1px solid #444;
+        }
+        
+        /* Checkboxes */
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.85rem;
+            color: #aaaaaa;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+        input[type="checkbox"] {
+            margin-top: 4px;
+            min-width: 16px;
+            height: 16px;
+        }
+        .helper-text {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.8rem;
+            color: #777;
+            text-align: center;
+        }
+
+        /* Alert/Info Box (PR Assistant) */
+        .info-box {
+            background-color: #1a1a1a;
+            border-left: 4px solid #e60000;
+            padding: 15px;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            color: #cccccc;
+            margin-bottom: 25px;
+        }
+
+        /* Closed Section Overlay */
+        .overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(10, 10, 10, 0.7);
+            backdrop-filter: blur(6px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+        .overlay-icon {
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+        .overlay-text {
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Header Section -->
+    <h1>Submitting Applications To The Anteiku BWS Community</h1>
+
+    <!-- Social Buttons -->
+    <a href="#" class="btn btn-discord">Discord Channel Anteiku</a>
+    <a href="#" class="btn btn-telegram">Telegram Channel Anteiku</a>
+    <a href="#" class="btn btn-curator">Application Curators</a>
+
+    <hr>
+
+    <!-- Rules Buttons -->
+    <a href="#" class="btn btn-red">Clan Rules</a>
+    <a href="#" class="btn btn-red">Media Rules</a>
+    <a href="#" class="btn btn-red">Emergency Regulations</a>
+
+    <!-- CLAN REGISTRATION -->
+    <div class="form-card">
+        <h2>Clan Registration</h2>
+        <form>
+            <div class="form-group"><label>1. Clan name:</label><input type="text"></div>
+            <div class="form-group"><label>2. Founder:</label><input type="text"></div>
+            <div class="form-group"><label>3. Deputy:</label><input type="text"></div>
+            <div class="form-group"><label>4. Are there any players in the clan who are on the blacklist? Yes/No</label><input type="text"></div>
+            <div class="form-group"><label>5. Communication:</label><input type="text"></div>
+            <div class="form-group"><label>6. Server link:</label><input type="text"></div>
+            
+            <div class="checkbox-group">
+                <input type="checkbox" id="clan-agree">
+                <label for="clan-agree">I agree with the community rules and am responsible for the players.</label>
+            </div>
+            <button type="button" class="btn btn-submit">Submit An Application</button>
+        </form>
+    </div>
+
+    <!-- ROLE MEDIA -->
+    <div class="form-card">
+        <h2>Role Media</h2>
+        <form>
+            <div class="form-group"><label>1. Discord tag:</label><input type="text"></div>
+            <div class="form-group"><label>2. Channel link:</label><input type="text"></div>
+            
+            <div class="checkbox-group">
+                <input type="checkbox" id="media-agree">
+                <label for="media-agree">Will you include a link to the Anteiku BWS Community Discord channel in the pinned comments below the video?</label>
+            </div>
+            <span class="helper-text">The server management decides whether to grant you this role or not.</span>
+            
+            <button type="button" class="btn btn-submit">Request A Role</button>
+        </form>
+    </div>
+
+    <!-- BLACKLIST -->
+    <div class="form-card">
+        <h2>Blacklist</h2>
+        <form>
+            <div class="form-group"><label>1. Your tag:</label><input type="text"></div>
+            <div class="form-group"><label>2. Violator (Tag and Nick):</label><input type="text"></div>
+            <div class="form-group"><label>3. Evidence (at least 3 screenshots):</label>
+                <textarea rows="3" placeholder="Yapx/Imgur links"></textarea>
+            </div>
+            
+            <button type="button" class="btn btn-submit-dark">Add To Blacklist</button>
+        </form>
+    </div>
+
+    <!-- APPLICATION FOR PR ASSISTANT -->
+    <div class="form-card">
+        <h2>Application For PR Assistant</h2>
+        <div class="info-box">
+            When responding, please be as detailed as possible. Review dates are set by management. Try to answer truthfully; we need worthy people.
+        </div>
+        <form>
+            <div class="form-group"><label>1. Your Discord tag:</label><input type="text"></div>
+            <div class="form-group"><label>2. Your experience in the following positions:</label><textarea rows="3"></textarea></div>
+            <div class="form-group"><label>3. Your age:</label><input type="text"></div>
+            <div class="form-group"><label>4. Will you be able to invite people? How?</label><textarea rows="3"></textarea></div>
+            <div class="form-group"><label>5. Your skills and abilities:</label><textarea rows="3"></textarea></div>
+            <div class="form-group"><label>6. Tell us about yourself:</label><textarea rows="3"></textarea></div>
+        </form>
+    </div>
+
+    <!-- STAFF APPLICATION (CLOSED) -->
+    <div class="form-card">
+        <h2 style="opacity: 0.3;">Staff Application</h2>
+        <div class="info-box" style="opacity: 0.3;">
+            When responding, please be as detailed as possible. Review dates are set by management. Try to answer truthfully; we need worthy people.
+        </div>
+        <form style="opacity: 0.3;">
+            <div class="form-group"><label>1. Nickname:</label><input type="text" disabled></div>
+            <div class="form-group"><label>2. Contacts (Discord/Telegram):</label><input type="text" disabled></div>
+            <div class="form-group"><label>3. Experience in positions:</label><textarea rows="2" disabled></textarea></div>
+            <div class="form-group"><label>4. Administration experience:</label><textarea rows="2" disabled></textarea></div>
+            <div class="form-group"><label>5. Age:</label><input type="text" disabled></div>
+            <div class="form-group"><label>6. Skills/abilities:</label><textarea rows="2" disabled></textarea></div>
+        </form>
+
+        <!-- Blocked Overlay -->
+        <div class="overlay">
+            <svg class="overlay-icon" width="48" height="48" viewBox="0 0 24 24" fill="#a0a0a0">
+                <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/>
+            </svg>
+            <div class="overlay-text">Reception is Closed</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
